@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Как сделать сайт в блокноте | Тутор от Макса и Расула</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- КРАСИВАЯ ШАПКА -->
+        <div class="header">
+            <div class="glitch-text">📝  Как создать свой сайт в Блокноте</div>
+            <div class="authors">
+                <span>👨‍💻  Макс</span>
+                <span>👨‍💻  Расул</span>
+            </div>
+            <div class="group-badge">🎓 Группа 1ИС-35</div>
+            <p class="subtitle">Пошаговый тутор для новичков. Никаких сложных программ — только блокнот и браузер!</p>
+        </div>
+
+        <!-- ========== ИНТЕРАКТИВНЫЕ КАРТОЧКИ С КНОПКАМИ ========== -->
+        
+        <!-- Карточка 1: Как создать слайд -->
+        <div class="step-card">
+            <div class="card-icon">🎨 </div>
+            <h2>Как создать красивый слайд на сайте?</h2>
+            <p>Нажми на кнопку — откроется полная инструкция с кодом.</p>
+            <button class="open-btn" data-target="slide-guide">📖  Показать инструкцию</button>
+            
+            <div id="slide-guide" class="hidden-guide">
+                <h3>✨ Как добавить слайдер на сайт</h3>
+                <p>Вставь этот код в свой HTML-файл (внутрь &lt;body&gt;):</p>
+                <code>
+&lt;div style="overflow-x: auto; white-space: nowrap; padding: 20px; background: #0f172a; border-radius: 20px;"&gt;
+    &lt;img src="https://picsum.photos/300/200?random=1" style="display: inline-block; margin-right: 15px; border-radius: 16px;"&gt;
+    &lt;img src="https://picsum.photos/300/200?random=2" style="display: inline-block; margin-right: 15px; border-radius: 16px;"&gt;
+    &lt;img src="https://picsum.photos/300/200?random=3" style="display: inline-block; margin-right: 15px; border-radius: 16px;"&gt;
+&lt;/div&gt;
+&lt;p style="text-align: center;"&gt;👉 Листай вправо, чтобы увидеть все слайды! 👈&lt;/p&gt;
+                </code>
+                <div class="tip">💡  Это горизонтальный слайдер. Картинки загружаются случайные — замени ссылки на свои!</div>
+                <button class="close-btn" data-target="slide-guide">✖️  Закрыть</button>
+            </div>
+        </div>
+
+        <!-- Карточка 2: Как добавить видео -->
+        <div class="step-card">
+            <div class="card-icon">🎥 </div>
+            <h2>Как добавить видео на сайт?</h2>
+            <p>Нажми на кнопку — узнаешь, как вставить видео с YouTube.</p>
+            <button class="open-btn" data-target="video-guide">📖  Показать инструкцию</button>
+            
+            <div id="video-guide" class="hidden-guide">
+                <h3>📺 Вставка видео с YouTube</h3>
+                <p>Скопируй этот код:</p>
+                <code>
+&lt;iframe width="100%" height="315" 
+    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+    frameborder="0" 
+    allowfullscreen&gt;
+&lt;/iframe&gt;
+                </code>
+                <p><strong>Как получить свою ссылку:</strong> Открой видео на YouTube → нажми "Поделиться" → "Встроить" → скопируй ссылку из src="..."</p>
+                <div class="tip">🎬 Замени dQw4w9WgXcQ на ID своего видео!</div>
+                <button class="close-btn" data-target="video-guide">✖️  Закрыть</button>
+            </div>
+        </div>
+
+        <!-- Карточка 3: Как сделать анимацию -->
+        <div class="step-card">
+            <div class="card-icon">✨</div>
+            <h2>Как добавить анимацию?</h2>
+            <p>Плавное появление, движения и эффекты.</p>
+            <button class="open-btn" data-target="animation-guide">📖  Показать инструкцию</button>
+            
+            <div id="animation-guide" class="hidden-guide">
+                <h3>🎭 Пример анимации</h3>
+                <p>Добавь в свой CSS-файл:</p>
+                <code>
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+to { opacity: 1; transform: translateY(0); }
+}
+
+.animated {
+    animation: fadeIn 0.6s ease-out;
+}
+                </code>
+                <p>А в HTML напиши:</p>
+                <code>
+&lt;h1 class="animated"&gt;Я появляюсь плавно!&lt;/h1&gt;
+                </code>
+                <div class="tip">💫  Анимация сработает при загрузке страницы</div>
+                <button class="close-btn" data-target="animation-guide">✖️  Закрыть</button>
+            </div>
+        </div>
+
+        <!-- Карточка 4: Как сделать меню -->
+        <div class="step-card">
+            <div class="card-icon">🧭 </div>
+            <h2>Как создать меню навигации?</h2>
+            <p>Меню, которое работает на всех страницах.</p>
+            <button class="open-btn" data-target="menu-guide">📖  Показать инструкцию</button>
+            
+            <div id="menu-guide" class="hidden-guide">
+                <h3>📌  Простое меню</h3>
+                <code>
+&lt;nav style="background: #1e293b; padding: 15px; border-radius: 50px;"&gt;
+    &lt;a href="#" style="color: white; margin: 0 15px;"&gt;Главная&lt;/a&gt;
+    &lt;a href="#" style="color: white; margin: 0 15px;"&gt;О нас&lt;/a&gt;
+    &lt;a href="#" style="color: white; margin: 0 15px;"&gt;Контакты&lt;/a&gt;
+&lt;/nav&gt;
+                </code>
+                <div class="tip">🔗  Вместо # вставь ссылки на другие страницы (например, about.html)</div>
+                <button class="close-btn" data-target="menu-guide">✖️  Закрыть</button>
+            </div>
+        </div>
+
+        <!-- Карточка 5: Как сделать форму -->
+        <div class="step-card">
+            <div class="card-icon">📧 </div>
+            <h2>Как добавить форму связи?</h2>
+            <p>Чтобы читатели могли писать вам.</p>
+            <button class="open-btn" data-target="form-guide">📖  Показать инструкцию</button>
+            
+            <div id="form-guide" class="hidden-guide">
+                <h3>📝  Простая форма</h3>
+                <code>
+&lt;form action="https://formspree.io/f/ваш_ключ" method="POST"&gt;
+    &lt;input type="text" placeholder="Ваше имя" required&gt;
+    &lt;input type="email" placeholder="Email" required&gt;
+    &lt;textarea placeholder="Сообщение" rows="4"&gt;&lt;/textarea&gt;
+    &lt;button type="submit"&gt;Отправить&lt;/button&gt;
+&lt;/form&gt;
+                </code>
+                <div class="tip">💌  Бесплатно: зарегистрируйся на formspree.io, получи ключ и вставь его вместо "ваш_ключ"</div>
+                <button class="close-btn" data-target="form-guide">✖️  Закрыть</button>
+            </div>
+        </div>
+
+        <!-- КРАСИВЫЙ ЧЕК-ЛИСТ -->
+        <div class="checklist">
+            <h2>✅ Что ты уже умеешь после этого тутора</h2>
+            <ul>
+                <li>✔ Открывать Блокнот</li>
+                <li>✔ Писать HTML-теги</li>
+                <li>✔ Сохранять файл как .html</li>
+                <li>✔ Открывать сайт в браузере</li>
+                <li>✔ Добавлять работающую кнопку с сообщением</li>
+                <li>✔ Создавать слайдер, видео, анимацию и меню!</li>
+            </ul>
+        </div>
+
+        <!-- КРАСИВЫЙ ПОДВАЛ -->
+        <div class="footer">
+            <p>Создано в Блокноте с ❤️  | <strong>Макс и Расул</strong> | Группа 1ИС-35 | 2026 год</p>
+            <p class="quote">«Этот тутор — ваш первый шаг в веб-разработку. Дальше — только круче!»</p>
+        </div>
+
+    </div>
+
+    <!-- СКРИПТ ДЛЯ КНОПОК (открытие/закрытие инструкций) -->
+    <script>
+        // Открытие инструкции
+        document.querySelectorAll('.open-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const targetId = this.getAttribute('data-target');
+                const guide = document.getElementById(targetId);
+                guide.classList.add('active');
+                // Плавная прокрутка к открытой инструкции
+                guide.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            });
+        });
+
+        // Закрытие инструкции
+document.querySelectorAll('.close-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const targetId = this.getAttribute('data-target');
+                const guide = document.getElementById(targetId);
+                guide.classList.remove('active');
+            });
+        });
+
+        console.log("%c🔥  Сайт от Макса и Расула | Группа 1ИС-35", "color: #f59e0b; font-size: 18px; font-weight: bold;");
+    </script>
+
+</body>
+</html>
